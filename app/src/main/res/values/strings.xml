@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">JoelSanchez_CentroDeportivo</string>
     <string name="tituloSaludo">BIENVENIDO/A</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tituloContacto">DATOS PERSONALES</string>
+    <string name="tituloDeportes">DEPORTES</string>
+    <string name="tituloResumen">RESUMEN</string>
 </resources>
