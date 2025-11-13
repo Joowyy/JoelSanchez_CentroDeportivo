@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">JoelSanchez_CentroDeportivo</string>
+    <string name="tituloSaludo">BIENVENIDO/A</string>
 </resources>
