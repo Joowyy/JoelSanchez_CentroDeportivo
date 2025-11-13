@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import com.example.joelsanchez_centrodeportivo.databinding.FragmentContactBinding
 import com.example.joelsanchez_centrodeportivo.databinding.FragmentPersonalDataBinding
 
@@ -34,7 +35,8 @@ class PersonalDataFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        return inflater.inflate(R.layout.fragment_personal_data, container, false)
+        binding = FragmentPersonalDataBinding.inflate(inflater, container, false)
+        return binding.root
 
     }
 
@@ -43,7 +45,8 @@ class PersonalDataFragment : Fragment() {
 
         binding.btnRegistro.setOnClickListener {
 
-
+            val navController = findNavController()
+            navController.navigate(R.id.action_personalDataFragment_to_contactFragment)
 
         }
 
