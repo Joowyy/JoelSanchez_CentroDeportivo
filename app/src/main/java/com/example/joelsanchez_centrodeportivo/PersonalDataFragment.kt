@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.example.joelsanchez_centrodeportivo.databinding.FragmentContactBinding
@@ -45,8 +46,19 @@ class PersonalDataFragment : Fragment() {
 
         binding.btnRegistro.setOnClickListener {
 
-            val navController = findNavController()
-            navController.navigate(R.id.action_personalDataFragment_to_contactFragment)
+            var usuario = binding.editTextUsuario.text.toString().trim()
+            var contrasenia = binding.editTextPsswd.text.toString().trim()
+
+            if (usuario.isEmpty() || contrasenia.isEmpty()) {
+
+                Toast.makeText(requireContext(), "Llena todos los campos!", Toast.LENGTH_SHORT).show()
+
+            } else {
+
+                val navController = findNavController()
+                navController.navigate(R.id.action_personalDataFragment_to_contactFragment)
+
+            }
 
         }
 
